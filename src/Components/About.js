@@ -4,7 +4,7 @@ import { SiTypescript, SiNextdotjs, SiTailwindcss, SiStorybook, SiCypress, SiJes
 
 const About = () => {
   return (
-    <section id="about" className="py-16 px-6 bg-gray-900 text-white">
+    <section id="about" className="py-16 px-4 md:px-16 bg-gray-900 text-white">
       {/* Heading */}
       <h3 className="text-3xl font-semibold mb-10 text-center">A BIT ‘BOUT MY JOURNEY</h3>
 
@@ -18,8 +18,12 @@ const About = () => {
 
       {/* Second Row */}
       <div className="mb-12">
-        <p className="text-gray-400 text-justify leading-relaxed max-w-3xl mx-auto">I’ve always been passionate about working on projects that push me to grow, learn new things, and collaborate with great people. This led me to take the leap into freelancing, where I’ve had the chance to work with awesome clients. Right now, I’m working with a cool startup, building sleek UIs with Next.js, Typescript, Tailwind and more.</p>
-        <p className="text-gray-400 text-justify leading-relaxed max-w-3xl mx-auto mb-6">Here’s some tech and frameworks I love and work with:</p>
+        <p className="text-gray-400 text-justify leading-relaxed max-w-3xl mx-auto">
+          I’ve always been passionate about working on projects that push me to grow, learn new things, and collaborate with great people. This led me to take the leap into freelancing, where I’ve had the chance to work with awesome clients. Right now, I’m working with a cool startup, building sleek UIs with Next.js, Typescript, Tailwind and more.
+        </p>
+        <p className="text-gray-400 text-justify leading-relaxed max-w-3xl mx-auto mb-6">
+          Here’s some tech and frameworks I love and work with:
+        </p>
         <div className="max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-gray-400 text-left">
           <div className="flex items-center space-x-2">
             <FaJsSquare className="text-3xl" />

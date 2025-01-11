@@ -1,0 +1,242 @@
+Here’s the full code for replicating the homepage with dark mode using React and Tailwind CSS. 
+
+### 1. Install Dependencies
+First, ensure your project is set up with Tailwind CSS. If not, you can follow the [Tailwind CSS setup guide](https://tailwindcss.com/docs/installation).
+
+### 2. Code Structure
+We'll create a single-page application (SPA) with multiple components.
+
+---
+
+### App.jsx
+```jsx
+import React from "react";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Work from "./components/Work";
+import Testimonials from "./components/Testimonials";
+import Footer from "./components/Footer";
+
+const App = () => {
+  return (
+    <div className="bg-gray-900 text-gray-100">
+      <Header />
+      <Hero />
+      <About />
+      <Work />
+      <Testimonials />
+      <Footer />
+    </div>
+  );
+};
+
+export default App;
+```
+
+---
+
+### Header.jsx
+```jsx
+import React from "react";
+
+const Header = () => {
+  return (
+    <header className="flex items-center justify-between px-8 py-4 border-b border-gray-700">
+      <h1 className="text-xl font-bold">RIDDHI LIMBACHIYA</h1>
+      <nav className="space-x-6">
+        <a href="#about" className="hover:text-teal-400">About</a>
+        <a href="#work" className="hover:text-teal-400">Work</a>
+        <a href="#testimonials" className="hover:text-teal-400">Testimonials</a>
+        <a href="#contact" className="hover:text-teal-400">Contact</a>
+      </nav>
+    </header>
+  );
+};
+
+export default Header;
+```
+
+---
+
+### Hero.jsx
+```jsx
+import React from "react";
+
+const Hero = () => {
+  return (
+    <section className="flex flex-col items-center text-center py-16 px-6">
+      <div className="rounded-full overflow-hidden w-32 h-32 mb-4">
+        <img
+          src="https://via.placeholder.com/150"
+          alt="Riddhi Limbachiya"
+          className="object-cover w-full h-full"
+        />
+      </div>
+      <h2 className="text-3xl font-semibold mb-2">RIDDHI LIMBACHIYA</h2>
+      <p className="text-gray-400">
+        A techie helping businesses build meaningful things! 🌟
+      </p>
+    </section>
+  );
+};
+
+export default Hero;
+```
+
+---
+
+### About.jsx
+```jsx
+import React from "react";
+
+const About = () => {
+  return (
+    <section id="about" className="py-16 px-6">
+      <h3 className="text-2xl font-semibold mb-4 text-center">
+        A Bit 'Bout My Journey
+      </h3>
+      <p className="text-gray-400 text-center leading-relaxed max-w-3xl mx-auto">
+        My journey started in Ahmedabad, exploring the world of tech. Over the years, I've helped businesses build websites, user experiences, and much more, always keeping my passion for creativity alive.
+      </p>
+    </section>
+  );
+};
+
+export default About;
+```
+
+---
+
+### Work.jsx
+```jsx
+import React from "react";
+
+const projects = [
+  {
+    title: "Lantern",
+    description: "A smart app for better team collaboration.",
+  },
+  {
+    title: "Fiskil",
+    description: "Data-sharing solutions for professionals.",
+  },
+  {
+    title: "Mokoboko",
+    description: "Wellness app designed to boost your health.",
+  },
+  {
+    title: "Scraye",
+    description: "Property management app for landlords.",
+  },
+];
+
+const Work = () => {
+  return (
+    <section id="work" className="py-16 px-6">
+      <h3 className="text-2xl font-semibold mb-8 text-center">Work</h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+          >
+            <h4 className="text-lg font-bold mb-2">{project.title}</h4>
+            <p className="text-gray-400">{project.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default Work;
+```
+
+---
+
+### Testimonials.jsx
+```jsx
+import React from "react";
+
+const testimonials = [
+  {
+    name: "Eugen Banu",
+    feedback:
+      "Riddhi is a skilled professional who exceeds expectations in every project.",
+  },
+  {
+    name: "Naren Mechavet",
+    feedback:
+      "Working with Riddhi has been a pleasure. She delivers excellent results.",
+  },
+];
+
+const Testimonials = () => {
+  return (
+    <section id="testimonials" className="py-16 px-6">
+      <h3 className="text-2xl font-semibold mb-8 text-center">Clients Love</h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {testimonials.map((testimonial, index) => (
+          <div
+            key={index}
+            className="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+          >
+            <p className="text-gray-400 italic">"{testimonial.feedback}"</p>
+            <h4 className="text-sm font-bold mt-4">{testimonial.name}</h4>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default Testimonials;
+```
+
+---
+
+### Footer.jsx
+```jsx
+import React from "react";
+
+const Footer = () => {
+  return (
+    <footer className="py-8 px-6 bg-gray-800 text-center">
+      <p className="text-gray-400">
+        Let's build beautiful, meaningful things together! 🌟
+      </p>
+      <p className="text-teal-400 mt-2">hello@example.com</p>
+      <p className="text-gray-600 text-sm mt-4">
+        © 2025 Designed & Developed by Riddhi Limbachiya
+      </p>
+    </footer>
+  );
+};
+
+export default Footer;
+```
+
+---
+
+### Tailwind Configuration
+Ensure dark mode is enabled in your `tailwind.config.js`:
+```js
+module.exports = {
+  darkMode: 'class', // Enables dark mode
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
+
+---
+
+This setup includes:
+- Fully responsive layout.
+- Dark mode-ready components.
+- Easy-to-edit modular structure.
+
+Let me know if you want enhancements or further customization!
