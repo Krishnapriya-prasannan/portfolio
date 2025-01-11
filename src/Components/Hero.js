@@ -5,8 +5,7 @@ const Hero = () => {
     <section className="flex flex-col md:flex-row items-center justify-center bg-gray-900 text-white py-16 px-4 md:px-16 font-[Montserrat]">
       {/* Right Image on Mobile */}
       <div
-        className="rounded-full overflow-hidden w-[300px] h-[350px] mb-6 md:mb-0 md:order-last md:ml-0 md:w-[400px] md:h-[466.15px] flex-shrink-0"
-        style={{
+        className="rounded-full overflow-hidden w-full md:w-[400px] md:h-[466.15px] mb-6 md:mb-0 md:order-last md:ml-0 flex-shrink-0"        style={{
           borderRadius: "168px 168px 168px 4px",
           border: "4px solid transparent",
           opacity: 1,
