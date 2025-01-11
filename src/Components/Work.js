@@ -1,13 +1,16 @@
 import React from "react";
+import { useTheme } from "./ThemeContext"; // Import the useTheme hook
 
 const Work = () => {
+  const { darkMode } = useTheme(); // Get darkMode from context
+
   const projects = [
     {
       title: "Lantern",
       description:
         "Lantern helps you close deals faster and smarter. Consolidate customer, prospect, and intent data, streamline sales tools, and use AI-powered insights.",
       techStack: ["Typescript", "React", "Next.js", "Tailwindcss", "Sass"],
-      image: "/images/lantern.png", // Replace with the correct image path
+      image: "/images/lantern.png",
     },
     {
       title: "Fiskil",
@@ -23,68 +26,100 @@ const Work = () => {
         "Jest",
         "Firebase",
       ],
-      image: "/images/fiskil.png", // Replace with the correct image path
+      image: "/images/fiskil.png",
     },
     {
       title: "Mokoboko",
       description:
         "Mokoboko makes Pilates and fitness easy by helping you seamlessly book classes, reserve spots, and get reminders before each session.",
       techStack: ["Typescript", "React", "Next.js", "Tailwindcss"],
-      image: "/images/mokoboko.png", // Replace with the correct image path
+      image: "/images/mokoboko.png",
     },
     {
       title: "Scraye",
       description:
         "Scraye is a housing platform that makes life easier across the UK, seamlessly connecting buyers, renters, owners, and agents. It simplifies selling, renting, and managing properties, all in one place.",
       techStack: ["Typescript", "React", "Redux", "Tailwindcss", "MUI", "Storybook", "Cypress"],
-      image: "/images/scraye.png", // Replace with the correct image path
+      image: "/images/scraye.png",
     },
   ];
 
   return (
-    <section className="bg-white text-gray-900 py-16 px-4 md:px-16 font-[Montserrat]">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-semibold">WORK</h2>
-        <p className="text-gray-600 text-2xl mt-4 ">
-          Check out some of my recent work – cool products I’ve been part of, built using the latest tech and libraries to create something awesome!
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center bg-white rounded-lg p-6 shadow-lg border border-gray-300"
+    <div className={darkMode ? "dark" : ""}> {/* Apply dark mode class */}
+      <section
+        className={`py-16 px-4 md:px-16 font-[Montserrat] ${
+          darkMode ? "bg-[#121212] text-[#E0E0E0]" : "bg-white text-gray-900"
+        }`}
+      >
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-semibold">WORK</h2>
+          <p
+            className={`${
+              darkMode ? "text-gray-400" : "text-gray-600"
+            } text-2xl mt-4`}
           >
-            {/* Image with Light Mode Background */}
-            <div className="relative w-full h-94 overflow-hidden rounded-lg">
-              <div className="absolute inset-0 "></div>
-              <img
-                src={project.image}
-                alt={project.title}
-                className="object-cover w-full h-full"
-              />
-            </div>
-            {/* Project Content */}
-            <div className="mt-4 text-center">
-              <h3 className="text-2xl font-semibold text-gray-900">{project.title}</h3>
-              <p className="text-gray-600 text-lg mt-2">{project.description}</p>
-              {/* Tech Stack */}
-              <div className="flex flex-wrap justify-center mt-4 space-x-2 space-y-2">
-                {project.techStack.map((tech, techIndex) => (
-                  <span
-                    key={techIndex}
-                    className="px-3 py-1 bg-gray-200 rounded-full text-lg text-gray-800"
-                  >
-                    {tech}
-                  </span>
-                ))}
+            Check out some of my recent work – cool products I’ve been part of,
+            built using the latest tech and libraries to create something
+            awesome!
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className={`flex flex-col items-center rounded-lg p-6 shadow-lg border ${
+                darkMode
+                  ? "bg-[#1E1E1E] border-gray-600"
+                  : "bg-white border-gray-300"
+              }`}
+            >
+              {/* Project Image */}
+              <div className="relative w-full h-94 overflow-hidden rounded-lg">
+                <div className="absolute inset-0"></div>
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="object-cover w-full h-full"
+                />
+              </div>
+              {/* Project Content */}
+              <div className="mt-4 text-center">
+                <h3
+                  className={`text-2xl font-semibold ${
+                    darkMode ? "text-white" : "text-gray-900"
+                  }`}
+                >
+                  {project.title}
+                </h3>
+                <p
+                  className={`text-lg mt-2 ${
+                    darkMode ? "text-gray-400" : "text-gray-600"
+                  }`}
+                >
+                  {project.description}
+                </p>
+                {/* Tech Stack */}
+                <div className="flex flex-wrap justify-center mt-4 space-x-2 space-y-2">
+                  {project.techStack.map((tech, techIndex) => (
+                    <span
+                      key={techIndex}
+                      className={`px-3 py-1 rounded-full text-lg ${
+                        darkMode
+                          ? "bg-gray-700 text-gray-300"
+                          : "bg-gray-200 text-gray-800"
+                      }`}
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
-    </section>
+          ))}
+        </div>
+      </section>
+    </div>
   );
 };
 

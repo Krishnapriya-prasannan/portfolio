@@ -1,5 +1,6 @@
 import React from "react";
 import { FaUserCircle } from "react-icons/fa";
+import { useTheme } from "./ThemeContext"; // Import the useTheme hook
 
 const testimonials = [
   {
@@ -21,53 +22,63 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
+  const { darkMode } = useTheme(); // Get darkMode from context
+
   return (
-    <section id="testimonials" className="py-16 px-6 bg-white text-gray-900">
-      <h3 className="text-3xl font-semibold mb-12 text-center text-gray-900">CLIENTS LOVE</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-        {testimonials.map((testimonial, index) => (
-          <div
-            key={index}
-            className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow relative border border-gray-300"
-          >
-            {/* User-Love Icon */}
-            <img
-              src={testimonial.icon}
-              alt="User Love Icon"
-              className="absolute top-4 left-4 w-8 h-8"
-            />
-            {/* Content Wrapper */}
-            <div className="mt-12">
-              {/* Testimonial Feedback */}
-              <p className="text-gray-700 text-2xl italic leading-relaxed mb-8">
-                "{testimonial.feedback}"
-              </p>
-              {/* Client Details */}
-              <div className="flex items-center ml-10 justify-between">
-                <div>
-                  <h4 className="text-2xl font-bold text-gray-900">
-                    {testimonial.name}
-                  </h4>
-                  <p className="text-xl text-gray-600">{testimonial.title}</p>
-                </div>
-                {/* Profile Picture or Icon */}
-                <div className="absolute bottom-15 left-4">
-                  {testimonial.profilePic ? (
-                    <img
-                      src={testimonial.profilePic}
-                      alt={`${testimonial.name}'s profile`}
-                      className="w-12 h-12 rounded-full object-cover border border-gray-300"
-                    />
-                  ) : (
-                    <FaUserCircle className="text-gray-600 w-12 h-12" />
-                  )}
+    <div className={darkMode ? "dark" : ""}> {/* Apply dark mode class */}
+      <section
+        className={`py-16 px-6 ${
+          darkMode ? "bg-[#121212] text-[#E0E0E0]" : "bg-white text-gray-900"
+        }`}
+      >
+        <h3 className="text-3xl font-semibold mb-12 text-center">CLIENTS LOVE</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              className={`p-8 rounded-lg shadow-md transition-shadow relative border ${
+                darkMode
+                  ? "bg-[#1E1E1E] text-[#E0E0E0] border-gray-600 hover:shadow-gray-500"
+                  : "bg-white text-gray-900 border-gray-300 hover:shadow-lg"
+              }`}
+            >
+              {/* User-Love Icon */}
+              <img
+                src={testimonial.icon}
+                alt="User Love Icon"
+                className="absolute top-4 left-4 w-8 h-8"
+              />
+              {/* Content Wrapper */}
+              <div className="mt-12">
+                {/* Testimonial Feedback */}
+                <p className="text-2xl italic leading-relaxed mb-8">
+                  "{testimonial.feedback}"
+                </p>
+                {/* Client Details */}
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h4 className="text-2xl font-bold">{testimonial.name}</h4>
+                    <p className="text-xl">{testimonial.title}</p>
+                  </div>
+                  {/* Profile Picture or Icon */}
+                  <div>
+                    {testimonial.profilePic ? (
+                      <img
+                        src={testimonial.profilePic}
+                        alt={`${testimonial.name}'s profile`}
+                        className="w-12 h-12 rounded-full object-cover border"
+                      />
+                    ) : (
+                      <FaUserCircle className="text-3xl" />
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
-    </section>
+          ))}
+        </div>
+      </section>
+    </div>
   );
 };
 
