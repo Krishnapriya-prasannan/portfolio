@@ -42,10 +42,10 @@ const Work = () => {
   ];
 
   return (
-    <section className="bg-gray-900 text-white py-16 px-4 md:px-16 font-[Montserrat]">
+    <section className="bg-white text-gray-900 py-16 px-4 md:px-16 font-[Montserrat]">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-semibold">WORK</h2>
-        <p className="text-gray-400 mt-4 text-lg">
+        <p className="text-gray-600 text-2xl mt-4 ">
           Check out some of my recent work – cool products I’ve been part of, built using the latest tech and libraries to create something awesome!
         </p>
       </div>
@@ -54,9 +54,9 @@ const Work = () => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="flex flex-col items-center bg-gray-800 rounded-lg p-6 shadow-lg"
+            className="flex flex-col items-center bg-white rounded-lg p-6 shadow-lg border border-gray-300"
           >
-            {/* Image with Dark Mode Background */}
+            {/* Image with Light Mode Background */}
             <div className="relative w-full h-94 overflow-hidden rounded-lg">
               <div className="absolute inset-0 "></div>
               <img
@@ -67,14 +67,14 @@ const Work = () => {
             </div>
             {/* Project Content */}
             <div className="mt-4 text-center">
-              <h3 className="text-2xl font-semibold">{project.title}</h3>
-              <p className="text-gray-400 mt-2">{project.description}</p>
+              <h3 className="text-2xl font-semibold text-gray-900">{project.title}</h3>
+              <p className="text-gray-600 text-lg mt-2">{project.description}</p>
               {/* Tech Stack */}
               <div className="flex flex-wrap justify-center mt-4 space-x-2 space-y-2">
                 {project.techStack.map((tech, techIndex) => (
                   <span
                     key={techIndex}
-                    className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300"
+                    className="px-3 py-1 bg-gray-200 rounded-full text-lg text-gray-800"
                   >
                     {tech}
                   </span>

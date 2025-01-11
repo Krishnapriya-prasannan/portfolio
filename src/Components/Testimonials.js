@@ -22,13 +22,13 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="py-16 px-6 bg-gray-900 text-white">
-      <h3 className="text-3xl font-semibold mb-12 text-center">CLIENTS LOVE</h3>
+    <section id="testimonials" className="py-16 px-6 bg-white text-gray-900">
+      <h3 className="text-3xl font-semibold mb-12 text-center text-gray-900">CLIENTS LOVE</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className="bg-gray-800 p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow relative"
+            className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow relative border border-gray-300"
           >
             {/* User-Love Icon */}
             <img
@@ -39,27 +39,27 @@ const Testimonials = () => {
             {/* Content Wrapper */}
             <div className="mt-12">
               {/* Testimonial Feedback */}
-              <p className="text-gray-300 italic leading-relaxed mb-8">
+              <p className="text-gray-700 text-2xl italic leading-relaxed mb-8">
                 "{testimonial.feedback}"
               </p>
               {/* Client Details */}
               <div className="flex items-center ml-10 justify-between">
                 <div>
-                  <h4 className="text-lg font-bold text-white">
+                  <h4 className="text-2xl font-bold text-gray-900">
                     {testimonial.name}
                   </h4>
-                  <p className="text-sm text-gray-400">{testimonial.title}</p>
+                  <p className="text-xl text-gray-600">{testimonial.title}</p>
                 </div>
                 {/* Profile Picture or Icon */}
-                <div className="absolute bottom-8 left-4">
+                <div className="absolute bottom-15 left-4">
                   {testimonial.profilePic ? (
                     <img
                       src={testimonial.profilePic}
                       alt={`${testimonial.name}'s profile`}
-                      className="w-12 h-12 rounded-full object-cover border border-gray-600"
+                      className="w-12 h-12 rounded-full object-cover border border-gray-300"
                     />
                   ) : (
-                    <FaUserCircle className="text-gray-500 w-12 h-12" />
+                    <FaUserCircle className="text-gray-600 w-12 h-12" />
                   )}
                 </div>
               </div>
