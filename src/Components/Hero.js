@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-center bg-gray-900 text-white py-16 px-16 font-[Montserrat]">
+    <section className="flex flex-col md:flex-row items-left justify-center bg-gray-900 text-white py-16 px-16 font-[Montserrat]">
       {/* Right Image on Mobile */}
       <div 
         className="rounded-full overflow-hidden w-[400px] h-[466.15px] mb-6 md:mb-0 md:order-last md:ml-0 md:w-[400px] md:h-[466.15px] flex-shrink-0"
@@ -20,9 +20,9 @@ const Hero = () => {
       </div>
 
       {/* Left Content */}
-      <div className="md:w-[calc(100%-400px)] text-center md:text-left md:pr-8 space-y-4">
+      <div className="md:w-[calc(100%-400px)] text-left md:text-left md:pr-8 space-y-4">
         <p className="text-lg md:text-xl">Heyyo👋, I’m</p>
-        <h2 className="text-3xl md:text-4xl font-medium text-center md:text-left leading-[48px] tracking-[-0.02em] md:text-5xl">
+        <h2 className="text-3xl md:text-4xl font-medium text-left md:text-left leading-[48px] tracking-[-0.02em] md:text-5xl">
           RIDDHI LIMBACHIYA
         </h2>
         {/* Explicit margin for gap between the name and description */}
