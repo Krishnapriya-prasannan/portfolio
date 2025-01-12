@@ -1,4 +1,3 @@
-// src/Components/Header.js
 import React, { useState, useEffect } from "react";
 import { useTheme } from "./ThemeContext"; 
 import { Link } from 'react-router-dom'; // Import Link for navigation
@@ -26,14 +25,14 @@ const Header = () => {
         <div className="text-3xl font-bold">RIDDHI LIMBACHIYA</div>
 
         <nav className="hidden md:flex space-x-6 text-center">
-          <a href="#about" className="hover:text-gray-500">About</a>
-          <a href="#work" className="hover:text-gray-500">Work</a>
-          <a href="#testimonials" className="hover:text-gray-500">Testimonials</a>
-          <a href="#contact" className="hover:text-gray-500">Contact</a>
+          <a href="#about" className="hover:text-gray-500">About</a> {/* Link to About section */}
+          <a href="#work" className="hover:text-gray-500">Work</a> {/* Link to Work section */}
+          <a href="#testimonials" className="hover:text-gray-500">Testimonials</a> {/* Link to Testimonials section */}
+          <a href="#contact" className="hover:text-gray-500">Contact</a> {/* Link to Contact section */}
         </nav>
 
         <div className="hidden md:block text-2xl hover:text-gray-500">
-          <Link to="/bio">Beyond the Bio</Link> {/* Use Link component */}
+          <Link to="/bio">Beyond the Bio</Link> {/* Use Link for navigating to Bio page */}
         </div>
 
         <button

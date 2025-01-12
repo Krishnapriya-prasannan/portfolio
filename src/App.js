@@ -1,4 +1,3 @@
-// src/App.js
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import necessary routing components
 import Header from './Components/Header';
@@ -11,17 +10,36 @@ import CopyrightSection from './Components/Copyright';
 import BeyondBio from './Components/BeyondTheBio'; // Import BeyondBio page
 import { ThemeProvider } from './Components/ThemeContext';
 
-function App() {
+const App = () => {
   return (
     <ThemeProvider>
-      <Router> {/* Wrap everything with Router */}
-        <Routes> {/* Define routes */}
-          <Route path="/" element={<div><Header /><Hero /><About /><Work /><Testimonials /><Footer /><CopyrightSection /></div>} />
-          <Route path="/bio" element={<BeyondBio />} /> {/* Define route for BeyondBio page */}
+      <Router>
+        <Routes>
+          {/* Main Route for Homepage */}
+          <Route path="/" element={
+            <div>
+              <Header />
+              <Hero />
+              <section id="about">
+                <About />
+              </section>
+              <section id="work">
+                <Work />
+              </section>
+              <section id="testimonials">
+                <Testimonials />
+              </section>
+              <Footer />
+              <CopyrightSection />
+            </div>
+          } />
+
+          {/* Route for BeyondBio page */}
+          <Route path="/bio" element={<BeyondBio />} />
         </Routes>
       </Router>
     </ThemeProvider>
   );
-}
+};
 
 export default App;
