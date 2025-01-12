@@ -1,8 +1,10 @@
+// src/Components/Header.js
 import React, { useState, useEffect } from "react";
-import { useTheme } from "./ThemeContext"; // Import the useTheme hook
+import { useTheme } from "./ThemeContext"; 
+import { Link } from 'react-router-dom'; // Import Link for navigation
 
 const Header = () => {
-  const { darkMode, toggleDarkMode } = useTheme(); // Get darkMode and toggleDarkMode from context
+  const { darkMode, toggleDarkMode } = useTheme(); 
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -14,20 +16,15 @@ const Header = () => {
 
     window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener("resize", handleResize); // Cleanup the listener
+      window.removeEventListener("resize", handleResize); 
     };
   }, []);
 
   return (
-    <div className={darkMode ? "dark" : ""}> {/* Apply dark class to parent */}
-      <header
-        className={`py-4 px-6 flex justify-between items-center font-[Montserrat] ${
-          darkMode ? "bg-[#121212] text-[#E0E0E0]" : "bg-white text-black"
-        }`} // Apply the same color scheme as Hero
-      >
+    <div className={darkMode ? "dark" : ""}> 
+      <header className={`py-4 px-6 flex justify-between items-center font-[Montserrat] ${darkMode ? "bg-[#121212] text-[#E0E0E0]" : "bg-white text-black"}`}>
         <div className="text-3xl font-bold">RIDDHI LIMBACHIYA</div>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6 text-center">
           <a href="#about" className="hover:text-gray-500">About</a>
           <a href="#work" className="hover:text-gray-500">Work</a>
@@ -35,12 +32,10 @@ const Header = () => {
           <a href="#contact" className="hover:text-gray-500">Contact</a>
         </nav>
 
-        {/* Right Section for Beyond the Bio */}
         <div className="hidden md:block text-2xl hover:text-gray-500">
-          <a href="#bio">Beyond the Bio</a>
+          <Link to="/bio">Beyond the Bio</Link> {/* Use Link component */}
         </div>
 
-        {/* Mobile Menu Button */}
         <button
           className="md:hidden text-2xl focus:outline-none"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -48,21 +43,17 @@ const Header = () => {
           {menuOpen ? "✖" : "☰"}
         </button>
 
-        {/* Dark Mode Toggle Icon */}
         <button
           className="text-2xl ml-4 focus:outline-none"
-          onClick={toggleDarkMode} // Toggle dark mode
+          onClick={toggleDarkMode} 
         >
-          {darkMode ? "🌞" : "🌙"} {/* Change icon based on dark mode */}
+          {darkMode ? "🌞" : "🌙"}
         </button>
       </header>
 
-      {/* Mobile Menu */}
       {menuOpen && (
         <nav
-          className={`absolute top-24 left-0 w-full text-center space-y-4 py-4 shadow-lg z-10 border-t border-gray-200 ${
-            darkMode ? "bg-[#121212] text-[#E0E0E0]" : "bg-white text-black"
-          } md:hidden`} // Same color scheme for mobile menu
+          className={`absolute top-24 left-0 w-full text-center space-y-4 py-4 shadow-lg z-10 border-t border-gray-200 ${darkMode ? "bg-[#121212] text-[#E0E0E0]" : "bg-white text-black"} md:hidden`}
         >
           <a href="#about" className="block hover:text-gray-500" onClick={() => setMenuOpen(false)}>
             About
@@ -76,9 +67,9 @@ const Header = () => {
           <a href="#contact" className="block hover:text-gray-500" onClick={() => setMenuOpen(false)}>
             Contact
           </a>
-          <a href="#bio" className="block hover:text-gray-500" onClick={() => setMenuOpen(false)}>
+          <Link to="/bio" className="block hover:text-gray-500" onClick={() => setMenuOpen(false)}>
             Beyond the Bio
-          </a>
+          </Link> {/* Use Link for mobile menu */}
         </nav>
       )}
     </div>
