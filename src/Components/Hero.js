@@ -12,7 +12,7 @@ const Hero = () => {
     >
       {/* Image Section */}
       <div
-        className={`overflow-hidden mt-4 mb-4 md:mb-0 md:order-last md:ml-0 flex-shrink-0 border-4 ${
+        className={`overflow-hidden  mb-4 md:mb-0 md:order-last md:ml-0 flex-shrink-0 border-4 ${
           darkMode ? "border-[#333333]" : "border-[#E0E0E0]"
         } md:border-0 rounded-[40px_40px_40px_4px]`} // Border color for dark mode
         style={{
@@ -30,16 +30,18 @@ const Hero = () => {
       </div>
 
       {/* Text Content */}
-      <div className="md:w-[calc(100%-450px)] text-left md:pr-8 space-y-4 mt-4 md:mt-0">
+      <div className="md:w-[calc(100%-450px)] text-left md:pr-8 space-y-4 mt-2 md:mt-0">
         <p
           className={`text-[16px] font-[400] leading-[24px] text-left ${
             darkMode ? "text-[#E0E0E0]" : "text-gray-700"
-          }`}
+          } md:text-[16px] md:font-[400] md:leading-[24px] md:text-left`}
         >
           Heyyo👋, I’m
         </p>
         <h2
-          className={`text-[48px] font-[500] leading-[48px] tracking-[-0.02em] text-left ${darkMode ? "text-[#E0E0E0]" : "text-black"}`}
+          className={`text-[30px] font-[500] leading-[36px] tracking-[-0.02em] text-left ${
+            darkMode ? "text-[#E0E0E0]" : "text-black"
+          } md:text-[48px] md:font-[500] md:leading-[48px]`}
           style={{
             position: "relative", // To position the pseudo-element
             zIndex: "1", // Ensure text stays above the pseudo-element
@@ -66,14 +68,14 @@ const Hero = () => {
         <p
           className={`text-[16px] font-[400] leading-[24px] text-left mt-4 ${
             darkMode ? "text-[#E0E0E0]" : "text-gray-600"
-          }`}
+          } md:text-[16px] md:font-[400] md:leading-[24px] md:text-left`}
         >
           A curiosity-driven frontend developer with design chops 🎨.
         </p>
         <p
           className={`text-[16px] font-[400] leading-[24px] text-left ${
             darkMode ? "text-[#E0E0E0]" : "text-gray-600"
-          }`}
+          } md:text-[16px] md:font-[400] md:leading-[24px] md:text-left`}
         >
           I believe it's OK to be you, You is dope.!
         </p>
