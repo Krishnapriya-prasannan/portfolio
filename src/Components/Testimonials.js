@@ -53,7 +53,7 @@ const Testimonials = () => {
             key={index}
             className={`p-8 hover:shadow-lg transition-shadow relative  ${
               darkMode
-                ? "bg-[#1E1E1E] text-gray-300 border-gray-700"
+                ? "bg-[#121212] text-gray-300 border-gray-700"
                 : "bg-[#FAFAFA] text-gray-900 border-gray-300"
             }`}
           >

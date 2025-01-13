@@ -51,7 +51,7 @@ const Work = () => {
           darkMode ? "bg-[#121212] text-[#E0E0E0]" : "bg-white text-gray-900"
         }`}
       >
-        <div className="text-left mb-12">
+        <div className="text-left mb-12 ml-6 flex flex-col">
           <h2
             className={`text-2xl font-semibold tracking-[0.06em] ${
               darkMode ? "text-white" : "text-black"
@@ -97,7 +97,7 @@ const Work = () => {
               key={index}
               className={`flex flex-col items-start p-6 ${
                 darkMode
-                  ? "bg-[#1E1E1E]"
+                  ? "bg-transparent text-gray-300" // No card-style background in dark mode
                   : "bg-white"
               }`}
             >
