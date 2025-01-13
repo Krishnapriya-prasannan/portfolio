@@ -95,14 +95,14 @@ const Work = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`flex flex-col items-start rounded-lg p-6 shadow-lg border ${
+              className={`flex flex-col items-start p-6 ${
                 darkMode
-                  ? "bg-[#1E1E1E] border-gray-600"
-                  : "bg-white border-gray-300"
+                  ? "bg-[#1E1E1E]"
+                  : "bg-white"
               }`}
             >
               {/* Project Image */}
-              <div className="relative w-full h-94 overflow-hidden rounded-lg">
+              <div className="relative w-full h-94 overflow-hidden">
                 <div className="absolute inset-0"></div>
                 <img
                   src={project.image}
