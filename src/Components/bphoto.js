@@ -10,10 +10,35 @@ const Photography = () => {
     >
       <div className="max-w-7xl mx-auto">
         {/* Title Section */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-6 text-center">
+        <h2
+          className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-6 text-center"
+          style={{
+            fontFamily: 'Montserrat',
+            fontSize: '24px',
+            fontWeight: '600',
+            lineHeight: '32px',
+            letterSpacing: '0.06em',
+            textAlign: 'center',
+            textUnderlinePosition: 'from-font',
+            textDecorationSkipInk: 'none',
+          }}
+        >
           PHOTOGRAPHY
         </h2>
-        <p className="text-lg sm:text-xl md:text-2xl mb-8 text-center">
+
+        {/* Content Section */}
+        <p
+          className="text-lg sm:text-xl md:text-2xl mb-8 text-center"
+          style={{
+            fontFamily: 'Montserrat',
+            fontSize: '16px',
+            fontWeight: '400',
+            lineHeight: '24px',
+            textAlign: 'center',
+            textUnderlinePosition: 'from-font',
+            textDecorationSkipInk: 'none',
+          }}
+        >
           Explore a mix of moments that catch my eye – from candid shots to peaceful landscapes. It’s all about seeing things from a fresh perspective. Dive in and enjoy!
         </p>
 
