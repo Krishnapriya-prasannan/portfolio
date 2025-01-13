@@ -28,13 +28,22 @@ const Testimonials = () => {
     <section
       id="testimonials"
       className={`py-16 px-6 ${
-        darkMode ? "bg-[#121212] text-[#E0E0E0]" : "bg-white text-gray-900"
+        darkMode ? "bg-[#121212] text-[#E0E0E0]" : "bg-[#FAFAFA] text-gray-900"
       }`}
     >
       <h3
         className={`text-3xl font-semibold mb-12 text-center ${
           darkMode ? "text-[#E0E0E0]" : "text-gray-900"
         }`}
+        style={{
+          fontFamily: "Montserrat",
+          fontSize: "24px",
+          fontWeight: "600",
+          lineHeight: "32px",
+          letterSpacing: "0.06em",
+          textAlign: "center",
+          textDecorationSkipInk: "none",
+        }}
       >
         CLIENTS LOVE
       </h3>
@@ -42,10 +51,10 @@ const Testimonials = () => {
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className={`p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow relative border ${
+            className={`p-8 hover:shadow-lg transition-shadow relative  ${
               darkMode
                 ? "bg-[#1E1E1E] text-gray-300 border-gray-700"
-                : "bg-white text-gray-900 border-gray-300"
+                : "bg-[#FAFAFA] text-gray-900 border-gray-300"
             }`}
           >
             {/* User-Love Icon */}
@@ -58,9 +67,17 @@ const Testimonials = () => {
             <div className="mt-12">
               {/* Testimonial Feedback */}
               <p
-                className={`text-2xl italic leading-relaxed mb-8 ${
+                className={`text-2xl leading-relaxed  mb-8 ${
                   darkMode ? "text-gray-400" : "text-gray-700"
                 }`}
+                style={{
+                  fontFamily: "Montserrat",
+                  fontSize: "16px",
+                  fontWeight: "400",
+                  lineHeight: "24px",
+                  textAlign: "left",
+                  textDecorationSkipInk: "none",
+                }}
               >
                 "{testimonial.feedback}"
               </p>
@@ -71,6 +88,14 @@ const Testimonials = () => {
                     className={`text-2xl font-bold ${
                       darkMode ? "text-white" : "text-gray-900"
                     }`}
+                    style={{
+                      fontFamily: "Montserrat",
+                      fontSize: "24px",
+                      fontWeight: "600",
+                      lineHeight: "32px",
+                      textAlign: "left",
+                      textDecorationSkipInk: "none",
+                    }}
                   >
                     {testimonial.name}
                   </h4>
@@ -78,6 +103,14 @@ const Testimonials = () => {
                     className={`text-xl ${
                       darkMode ? "text-gray-400" : "text-gray-600"
                     }`}
+                    style={{
+                      fontFamily: "Montserrat",
+                      fontSize: "16px",
+                      fontWeight: "400",
+                      lineHeight: "24px",
+                      textAlign: "left",
+                      textDecorationSkipInk: "none",
+                    }}
                   >
                     {testimonial.title}
                   </p>
