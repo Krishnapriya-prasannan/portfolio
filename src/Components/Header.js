@@ -45,33 +45,37 @@ const Header = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-6 text-lg">
-          <a href="#work" className="hover:text-gray-400">
+        <nav className="hidden md:flex space-x-6 text-md">
+          <a href="#work" className="text-zinc-950 dark:text-white hover:text-gray-400">
             Work
           </a>
-          <a href="#about" className="hover:text-gray-400">
+          <a href="#about" className="text-zinc-950 dark:text-white hover:text-gray-400">
             Journey
           </a>
-          <a href="#testimonials" className="hover:text-gray-400">
+          <a href="#testimonials" className="text-zinc-950 dark:text-white hover:text-gray-400">
             Testimonials
           </a>
-          <a href="#contact" className="hover:text-gray-400">
+          <a href="#contact" className="text-zinc-950 dark:text-white hover:text-gray-400">
             Contact
           </a>
         </nav>
 
         {/* Beyond the Bio */}
         <div className="hidden md:block text-lg hover:text-gray-400">
-          <Link to="/bio">Beyond the Bio</Link>
+          <Link to="/bio" className="text-zinc-950 dark:text-white hover:text-gray-400">
+            Beyond the Bio
+          </Link>
         </div>
- {/* Dark Mode Toggle */}
- <button
+
+        {/* Dark Mode Toggle */}
+        <button
           className="text-2xl ml-4 focus:outline-none transition-transform transform hover:scale-110"
           onClick={toggleDarkMode}
           style={{ padding: "8px" }} // Adjust padding for a better click area
         >
           {darkMode ? <HiOutlineSun /> : <HiOutlineMoon />}
         </button>
+
         {/* Mobile Menu Button */}
         <button
           className="md:hidden text-2xl focus:outline-none"
@@ -79,10 +83,7 @@ const Header = () => {
         >
           {menuOpen ? "✖" : "☰"}
         </button>
-
       </header>
-        
-       
 
       {/* Mobile Navigation */}
       {menuOpen && (
@@ -93,35 +94,35 @@ const Header = () => {
         >
           <a
             href="#work"
-            className="block hover:text-gray-500"
+            className="block text-zinc-900 dark:text-white hover:text-gray-500"
             onClick={() => setMenuOpen(false)}
           >
             Work
           </a>
           <a
             href="#journey"
-            className="block hover:text-gray-500"
+            className="block text-zinc-900 dark:text-white hover:text-gray-500"
             onClick={() => setMenuOpen(false)}
           >
             Journey
           </a>
           <a
             href="#testimonials"
-            className="block hover:text-gray-500"
+            className="block text-zinc-900 dark:text-white hover:text-gray-500"
             onClick={() => setMenuOpen(false)}
           >
             Testimonials
           </a>
           <a
             href="#contact"
-            className="block hover:text-gray-500"
+            className="block text-zinc-900 dark:text-white hover:text-gray-500"
             onClick={() => setMenuOpen(false)}
           >
             Contact
           </a>
           <Link
             to="/bio"
-            className="block hover:text-gray-500"
+            className="block text-zinc-900 dark:text-white hover:text-gray-500"
             onClick={() => setMenuOpen(false)}
           >
             Beyond the Bio

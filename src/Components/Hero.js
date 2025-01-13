@@ -32,9 +32,30 @@ const Hero = () => {
       {/* Text Content */}
       <div className="md:w-[calc(100%-450px)] text-left md:pr-8 space-y-4">
         <p className="text-lg md:text-3xl text-gray-700">Heyyo👋, I’m</p>
-        <h2 className="text-5xl md:text-8xl font-medium leading-[50px] tracking-[-0.02em]">
+        <h2
+          className={`text-5xl md:text-8xl font-medium leading-[50px] tracking-[-0.02em] ${
+            darkMode ? "text-[#E0E0E0]" : "text-black"
+          }`}
+          style={{
+            position: "relative", // To position the pseudo-element
+            zIndex: "1", // Ensure text stays above the pseudo-element
+            display: "inline-block", // Make sure the span only takes the width of the text
+          }}
+        >
           RIDDHI LIMBACHIYA
+          {/* Gradient effect under the text */}
+          <span
+            className="absolute bottom-0 left-0 h-8"
+            style={{
+              background: "linear-gradient(90deg, #FEFCE8 0%, #FFE4E6 100%)",
+              content: "''",
+              zIndex: "-1", // Place the gradient below the text
+              width: "100%", // Ensure it spans the entire width of the text
+              opacity: 0.8, // Optional: Adds a soft transition for the gradient
+            }}
+          ></span>
         </h2>
+
         <p
           className={`text-base md:text-lg md:text-2xl mt-4 ${
             darkMode ? "text-[#E0E0E0]" : "text-gray-600"

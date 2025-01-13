@@ -10,24 +10,43 @@ const About = () => {
     <section
       id="about"
       className={`py-16 px-4 md:px-16 ${
-        darkMode ? "bg-[#121212] text-[#E0E0E0]" : "bg-white text-black"
+        darkMode ? "bg-[#121212] text-[#E0E0E0]" : "bg-[#FAFAFA] text-black"
       }`} // Apply dark mode styles here
     >
       {/* Heading */}
-      <h3
-        className={`text-3xl font-semibold mb-10 text-center ${
+      <h2
+        className={`text-2xl font-semibold mb-10 text-left ${
           darkMode ? "text-[#E0E0E0]" : "text-black"
         }`}
+        style={{
+          fontFamily: "Montserrat",
+          fontSize: "24px",
+          fontWeight: "600",
+          lineHeight: "32px",
+          letterSpacing: "0.06em",
+          textAlign: "center",
+          textUnderlinePosition: "from-font",
+          textDecorationSkipInk: "none"
+        }}
       >
         A BIT ‘BOUT MY JOURNEY
-      </h3>
+      </h2>
 
       {/* First Row */}
       <div className="mb-12">
         <p
-          className={`text-justify leading-relaxed text-2xl max-w-3xl mx-auto ${
+          className={`text-justify leading-relaxed max-w-3xl mx-auto ${
             darkMode ? "text-[#E0E0E0]" : "text-gray-700"
           }`}
+          style={{
+            fontFamily: "Montserrat",
+            fontSize: "16px",
+            fontWeight: "400",
+            lineHeight: "24px",
+            textAlign: "left",
+            textUnderlinePosition: "from-font",
+            textDecorationSkipInk: "none"
+          }}
         >
           I’m a freelance frontend developer based in Ahmedabad, India, with almost 6 years of experience. My journey started at an MNC, then I moved to a startup where I had the chance to build some cool projects that taught me a ton. I began with JavaScript, built apps using Angular, and then switched to React, where I had the opportunity to work on projects from scratch that really shaped my skills in JS and UI development. I don't dive into the back-end too often, but in case you're wondering, I know Node.js, Express & MongoDB. Just a peek behind the curtain!
         </p>
@@ -36,16 +55,34 @@ const About = () => {
       {/* Second Row */}
       <div className="mb-12">
         <p
-          className={`text-justify leading-relaxed text-2xl max-w-3xl mx-auto ${
+          className={`text-justify leading-relaxed max-w-3xl mx-auto ${
             darkMode ? "text-[#E0E0E0]" : "text-gray-700"
           }`}
+          style={{
+            fontFamily: "Montserrat",
+            fontSize: "16px",
+            fontWeight: "400",
+            lineHeight: "24px",
+            textAlign: "left",
+            textUnderlinePosition: "from-font",
+            textDecorationSkipInk: "none"
+          }}
         >
           I’ve always been passionate about working on projects that push me to grow, learn new things, and collaborate with great people. This led me to take the leap into freelancing, where I’ve had the chance to work with awesome clients. Right now, I’m working with a cool startup, building sleek UIs with Next.js, Typescript, Tailwind and more.
         </p>
         <p
-          className={`text-justify leading-relaxed text-2xl max-w-3xl mx-auto mb-6 ${
+          className={`text-justify leading-relaxed max-w-3xl mx-auto mb-6 ${
             darkMode ? "text-[#E0E0E0]" : "text-gray-700"
           }`}
+          style={{
+            fontFamily: "Montserrat",
+            fontSize: "16px",
+            fontWeight: "400",
+            lineHeight: "24px",
+            textAlign: "left",
+            textUnderlinePosition: "from-font",
+            textDecorationSkipInk: "none"
+          }}
         >
           Here’s some tech and frameworks I love and work with:
         </p>
@@ -108,9 +145,18 @@ const About = () => {
       {/* Third Row */}
       <div className="mb-12">
         <p
-          className={`text-left leading-relaxed text-2xl max-w-3xl mx-auto ${
+          className={`text-left leading-relaxed max-w-3xl mx-auto ${
             darkMode ? "text-[#E0E0E0]" : "text-gray-700"
           }`}
+          style={{
+            fontFamily: "Montserrat",
+            fontSize: "16px",
+            fontWeight: "400",
+            lineHeight: "24px",
+            textAlign: "left",
+            textUnderlinePosition: "from-font",
+            textDecorationSkipInk: "none"
+          }}
         >
           Fun fact: I’ve been learning Figma just for fun, mainly to create templates and get a feel for how the tool works. It’s been a great way to boost my creativity and help me design UIs more intuitively. One day, I thought, what better way to apply my Figma knowledge than by designing my own portfolio? And here it is – my very first Figma project! 🧨
         </p>
@@ -119,9 +165,18 @@ const About = () => {
       {/* Fourth Row */}
       <div className="mb-12">
         <p
-          className={`text-left leading-relaxed text-2xl max-w-3xl mx-auto ${
+          className={`text-left leading-relaxed max-w-3xl mx-auto ${
             darkMode ? "text-[#E0E0E0]" : "text-gray-700"
           }`}
+          style={{
+            fontFamily: "Montserrat",
+            fontSize: "16px",
+            fontWeight: "400",
+            lineHeight: "24px",
+            textAlign: "left",
+            textUnderlinePosition: "from-font",
+            textDecorationSkipInk: "none"
+          }}
         >
           Learning advanced TypeScript is something I’m working on, and I try to dedicate time to it whenever I can.
         </p>
