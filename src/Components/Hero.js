@@ -12,7 +12,7 @@ const Hero = () => {
     >
       {/* Image Section */}
       <div
-        className={`overflow-hidden mb-8 md:mb-0 md:order-last md:ml-0 flex-shrink-0 border-4 ${
+        className={`overflow-hidden mt-10 mb-8 md:mb-0 md:order-last md:ml-0 flex-shrink-0 border-4 ${
           darkMode ? "border-[#333333]" : "border-[#E0E0E0]"
         } md:border-0 rounded-[40px_40px_40px_4px]`} // Border color for dark mode
         style={{
