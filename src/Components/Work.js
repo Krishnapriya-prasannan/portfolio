@@ -51,12 +51,39 @@ const Work = () => {
           darkMode ? "bg-[#121212] text-[#E0E0E0]" : "bg-white text-gray-900"
         }`}
       >
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-semibold">WORK</h2>
+        <div className="text-left mb-12">
+          <h2
+            className={`text-2xl font-semibold tracking-[0.06em] ${
+              darkMode ? "text-white" : "text-black"
+            }`}
+            style={{
+              fontFamily: "Montserrat",
+              fontSize: "24px",
+              fontWeight: 600,
+              lineHeight: "32px",
+              textUnderlinePosition: "from-font",
+              textDecorationSkipInk: "none",
+              textAlign: "left",
+              textDecoration: "none",
+            }}
+          >
+            WORK
+          </h2>
           <p
             className={`${
               darkMode ? "text-gray-400" : "text-gray-600"
-            } text-2xl mt-4`}
+            } text-xl mt-4`}
+            style={{
+              fontFamily: "Montserrat",
+              fontSize: "16px",
+              fontWeight: 400,
+              lineHeight: "24px",
+              textUnderlinePosition: "from-font",
+              textDecorationSkipInk: "none",
+              textAlign: "left",
+              textDecoration: "none",
+              textJustify: "inter-word", // Justify text
+            }}
           >
             Check out some of my recent work – cool products I’ve been part of,
             built using the latest tech and libraries to create something
@@ -68,7 +95,7 @@ const Work = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`flex flex-col items-center rounded-lg p-6 shadow-lg border ${
+              className={`flex flex-col items-start rounded-lg p-6 shadow-lg border ${
                 darkMode
                   ? "bg-[#1E1E1E] border-gray-600"
                   : "bg-white border-gray-300"
@@ -84,11 +111,21 @@ const Work = () => {
                 />
               </div>
               {/* Project Content */}
-              <div className="mt-4 text-center">
+              <div className="mt-4 text-left">
                 <h3
-                  className={`text-2xl font-semibold ${
+                  className={`text-xl font-semibold ${
                     darkMode ? "text-white" : "text-gray-900"
                   }`}
+                  style={{
+                    fontFamily: "Montserrat",
+                    fontSize: "20px",
+                    fontWeight: 600,
+                    lineHeight: "28px",
+                    letterSpacing: "0.03em",
+                    textUnderlinePosition: "from-font",
+                    textDecorationSkipInk: "none",
+                    textAlign: "left",
+                  }}
                 >
                   {project.title}
                 </h3>
@@ -96,11 +133,20 @@ const Work = () => {
                   className={`text-lg mt-2 ${
                     darkMode ? "text-gray-400" : "text-gray-600"
                   }`}
+                  style={{
+                    fontFamily: "Montserrat",
+                    fontSize: "16px",
+                    fontWeight: 400,
+                    lineHeight: "24px",
+                    textAlign: "left",
+                    textDecorationSkipInk: "none",
+                    textJustify: "inter-word", // Justify text
+                  }}
                 >
                   {project.description}
                 </p>
                 {/* Tech Stack */}
-                <div className="flex flex-wrap justify-center mt-4 space-x-2 space-y-2">
+                <div className="flex flex-wrap justify-start mt-4 space-x-2 space-y-2">
                   {project.techStack.map((tech, techIndex) => (
                     <span
                       key={techIndex}
