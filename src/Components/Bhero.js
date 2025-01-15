@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTheme } from './ThemeContext'; // Import the useTheme hook
 
-const Header = () => {
+const HeroSection = () => {
   const { darkMode, toggleDarkMode } = useTheme(); // Access darkMode and toggleDarkMode
 
   return (
@@ -17,4 +17,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeroSection;

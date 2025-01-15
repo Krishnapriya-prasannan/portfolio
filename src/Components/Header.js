@@ -3,6 +3,7 @@ import { useTheme } from "./ThemeContext";
 import { Link } from "react-router-dom"; // Import Link for navigation
 import { HiOutlineSun, HiOutlineMoon } from "react-icons/hi"; // Import icons from 'react-icons/hi'
 
+
 const Header = () => {
   const { darkMode, toggleDarkMode } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -55,7 +56,10 @@ const Header = () => {
           <a href="#testimonials" className="text-zinc-950 dark:text-white hover:text-gray-400">
             Testimonials
           </a>
-          <a href="#contact" className="text-zinc-950 dark:text-white hover:text-gray-400">
+          <a href="/exp" className="text-zinc-950 dark:text-white hover:text-gray-400">
+            Experiences
+          </a>
+          <a href="/contact" className="text-zinc-950 dark:text-white hover:text-gray-400">
             Contact
           </a>
         </nav>
@@ -114,7 +118,14 @@ const Header = () => {
             Testimonials
           </a>
           <a
-            href="#contact"
+            href="/exp"
+            className="block text-zinc-900 dark:text-white hover:text-gray-500"
+            onClick={() => setMenuOpen(false)}
+          >
+            Experiences
+          </a>
+          <a
+            href="/contact"
             className="block text-zinc-900 dark:text-white hover:text-gray-500"
             onClick={() => setMenuOpen(false)}
           >

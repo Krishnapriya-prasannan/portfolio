@@ -7,9 +7,10 @@ import Work from './Components/Work';
 import Testimonials from './Components/Testimonials';
 import Footer from './Components/Footer';
 import CopyrightSection from './Components/Copyright';
-import BeyondBio from './Components/BeyondTheBio'; // Import BeyondBio page
+import BeyondBio from './Pages/BeyondTheBio'; // Import BeyondBio page
 import { ThemeProvider } from './Components/ThemeContext';
-
+import ExperienceSection from './Pages/ExpPage';
+import ContactPage from './Pages/ContactPage';
 const App = () => {
   return (
     <ThemeProvider>
@@ -33,6 +34,8 @@ const App = () => {
               <CopyrightSection />
             </div>
           } />
+         <Route path="/exp" element={<ExperienceSection />} />
+         <Route path="/contact" element={<ContactPage />} />
 
           {/* Route for BeyondBio page */}
           <Route path="/bio" element={<BeyondBio />} />

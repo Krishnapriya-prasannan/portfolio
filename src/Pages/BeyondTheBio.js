@@ -1,10 +1,10 @@
 // src/Components/BeyondBio.js
 import React from 'react';
-import Header from './Header'; 
-import CopyrightSection from './Copyright'; 
-import HeroSection from './Bhead';
-import About from './babout';
-import Photography from './bphoto';
+import Header from '../Components/Header'; 
+import CopyrightSection from '../Components/Copyright'; 
+import HeroSection from '../Components/Bhero';
+import About from '../Components/babout';
+import Photography from '../Components/bphoto';
 const BeyondBio = () => {
   return (
     <div>
