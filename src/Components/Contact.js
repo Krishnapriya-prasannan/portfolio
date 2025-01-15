@@ -6,7 +6,7 @@ const Contact = () => {
 
   return (
     <div
-      className={`min-h-screen flex flex-col justify-center items-center px-4 sm:px-8 md:px-16 lg:px-32 ${
+      className={`min-h-screen flex flex-col justify-center items-center px-4 sm:px-8 md:px-16 lg:px-32 font-montserrat ${
         darkMode ? "bg-[#121212] text-[#E0E0E0]" : "bg-gray-50 text-black"
       }`}
     >

@@ -40,7 +40,9 @@ const ExperiencePage = () => {
   ];
 
   return (
-    <div className={`min-h-screen p-8 ${darkMode ? "bg-[#121212] text-[#E0E0E0]" : "bg-gray-50 text-black"}`}>
+    <div
+      className={`min-h-screen p-8 ${darkMode ? "bg-[#121212] text-[#E0E0E0]" : "bg-gray-50 text-black"} font-montserrat`}
+    >
       <h1 className="text-4xl font-bold mb-8 flex items-center">
         Experience{" "}
         <span className="ml-2" role="img" aria-label="technologist">
@@ -61,12 +63,12 @@ const ExperiencePage = () => {
             <div
               className={`relative z-10 ${
                 darkMode ? "bg-gray-600" : "bg-teal-500"
-              } w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center`}
+              } w-8 h-8 rounded-full flex items-center justify-center`}
             >
               <div
                 className={`${
                   darkMode ? "bg-gray-900" : "bg-white"
-                } w-3 h-3 sm:w-4 sm:h-4 rounded-full`}
+                } w-4 h-4 rounded-full`}
               ></div>
             </div>
 
