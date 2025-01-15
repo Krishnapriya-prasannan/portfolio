@@ -10,6 +10,7 @@ const Contact = () => {
         darkMode ? "bg-[#121212] text-[#E0E0E0]" : "bg-gray-50 text-black"
       }`}
     >
+     
       {/* Header */}
       <header className="w-full flex items-center justify-start py-6">
         <h1 className="text-4xl font-bold">
@@ -46,10 +47,7 @@ const Contact = () => {
         >
           <form className="space-y-6">
             <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium"
-              >
+              <label htmlFor="name" className="block text-sm font-medium">
                 Name
               </label>
               <input
@@ -65,10 +63,7 @@ const Contact = () => {
               />
             </div>
             <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium"
-              >
+              <label htmlFor="email" className="block text-sm font-medium">
                 Email
               </label>
               <input
@@ -84,10 +79,7 @@ const Contact = () => {
               />
             </div>
             <div>
-              <label
-                htmlFor="message"
-                className="block text-sm font-medium"
-              >
+              <label htmlFor="message" className="block text-sm font-medium">
                 Message
               </label>
               <textarea

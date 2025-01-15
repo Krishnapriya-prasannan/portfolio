@@ -43,6 +43,7 @@ const ExperiencePage = () => {
     <div
       className={`min-h-screen p-8 ${darkMode ? "bg-[#121212] text-[#E0E0E0]" : "bg-gray-50 text-black"} font-montserrat`}
     >
+     
       <h1 className="text-4xl font-bold mb-8 flex items-center">
         Experience{" "}
         <span className="ml-2" role="img" aria-label="technologist">
